@@ -1,0 +1,15 @@
+#include "opencv\cv.h"
+#include "opencv\highgui.h"
+#include "opencv\cxcore.h"
+
+using namespace cv;
+
+int main () {
+  IplImage *gambar = cvLoadImage ("C:/key.jpg");
+	cvNamedWindow ("show",CV_WINDOW_AUTOSIZE);
+	cvShowImage("show",gambar);
+
+	waitKey(0);
+	cvReleaseImage (&gambar);
+	cvDestroyWindow("show");
+}
